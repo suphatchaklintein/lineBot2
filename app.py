@@ -23,9 +23,9 @@ def callback():
     user = decoded['originalDeteclntentRequest']['payload']['data']['replyToken']
     userText = decoded['queryResult']['intent']['displayName']
     if (a2 == 'สวัสดี') :
-        Print('ดีด้วยจ้า) 
+        print('ดีด้วยจ้า) 
     else (a2 == 'สบายดีไหม') :
-        Print('ยังไม่ตายค่ะ)
+        print('ยังไม่ตายค่ะ)
     else ;
          print('ว่าอะไรค่ะ)
     return '',200
