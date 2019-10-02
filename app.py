@@ -22,24 +22,10 @@ def callback():
     decoded = json.loads(json_line)
     user = decoded["events"][0]['replyToken']
     userText = decoded["events"][0]['message']['text']
-    if (a2 == 'สวัสดี');
-        print('ดีด้วยจ้า);
-    else (a2 == 'สบายดีไหม')
-        print('ยังไม่ตายค่ะ);
+    if (a2 == 'สวัสดี') :
+        print('ดีด้วยจ้า) 
+    else (a2 == 'สบายดีไหม') :
+        print('ยังไม่ตายค่ะ)
     else ;
-         print('ว่าอะไรค่ะ);
+         print('ว่าอะไรค่ะ)
     return '',200
-def sendText(user, text):
-  LINE_API = 'https://api.line.me/v2/bot/message/reply'
-  headers = {
-    'Content-Type': 'application/json; charset=UTF-8',
-    'Authorization': os.environ['Authorization']    # ตั้ง Config vars ใน heroku พร้อมค่า Access token
-  }
-  data = json.dumps({
-    "replyToken":user,
-    "messages":[{"type":"text","text":text}]
-  })
-  r = requests.post(LINE_API, headers=headers, data=data) # ส่งข้อมูล
-
-if __name__ == '__main__':
-    app.run()
